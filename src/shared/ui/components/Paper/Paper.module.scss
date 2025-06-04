@@ -1,0 +1,14 @@
+@use '../../styles/variables' as vars;
+
+.paper {
+  background-color: vars.$md-sys-color-surface;
+  color: vars.$md-sys-color-on-surface;
+  border-radius: vars.$border-radius-md;
+  box-shadow: vars.$md-sys-elevation-1;
+  padding: vars.$spacing-lg;
+  margin-bottom: vars.$spacing-xl;
+
+  &:hover {
+    box-shadow: vars.$md-sys-elevation-2;
+  }
+} 

@@ -1,0 +1,74 @@
+@use './_variables' as vars;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: vars.$md-sys-color-background;
+  color: vars.$md-sys-color-on-background;
+  font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+input, select, button {
+  font-family: inherit;
+}
+
+input, select {
+  background-color: vars.$md-sys-color-surface-variant;
+  color: vars.$md-sys-color-on-surface;
+  border: 1px solid rgba(vars.$md-sys-color-on-surface, 0.12);
+  border-radius: vars.$border-radius-sm;
+  padding: vars.$spacing-sm vars.$spacing-md;
+  font-size: vars.$md-sys-typescale-body-medium;
+  width: 100%;
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: vars.$md-sys-color-primary;
+  }
+
+  &::placeholder {
+    color: rgba(vars.$md-sys-color-on-surface, 0.7);
+  }
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23E6E1E5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right vars.$spacing-md center;
+  padding-right: vars.$spacing-xl;
+}
+
+label {
+  display: block;
+  color: vars.$md-sys-color-on-surface-variant;
+  font-size: vars.$md-sys-typescale-body-small;
+  margin-bottom: vars.$spacing-xs;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: vars.$md-sys-color-on-surface;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: vars.$md-sys-typescale-title-medium;
+  color: vars.$md-sys-color-on-background;
+} 

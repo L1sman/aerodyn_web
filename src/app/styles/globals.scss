@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@use '@/shared/ui/styles/_variables' as vars;
+
+:root {
+  font-family: vars.$font-family-base;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: vars.$font-family-base;
+  background-color: vars.$md-sys-color-background;
+  color: vars.$md-sys-color-on-background;
+}
+
+body {
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, div {
+  font-family: inherit;
+} 

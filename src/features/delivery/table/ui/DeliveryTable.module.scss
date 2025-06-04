@@ -1,0 +1,172 @@
+@use '@/shared/ui/styles/_variables' as vars;
+@use "sass:color";
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: vars.$md-sys-color-surface;
+  border-radius: vars.$border-radius-md;
+  overflow: hidden;
+  table-layout: auto;
+  min-width: max-content;
+  box-shadow: vars.$md-sys-elevation-1;
+  font-family: vars.$font-family-base;
+
+  &:hover {
+    box-shadow: vars.$md-sys-elevation-2;
+  }
+}
+
+.header {
+  background-color: vars.$md-sys-color-surface-variant;
+  color: vars.$md-sys-color-on-surface-variant;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  height: 48px;
+
+  th {
+    padding: vars.$spacing-md;
+    text-align: left;
+    font-weight: 500;
+    vertical-align: middle;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: inherit;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: color.adjust(vars.$md-sys-color-surface-variant, $lightness: -5%);
+    }
+
+    &:first-child {
+      padding-left: vars.$spacing-lg;
+    }
+
+    &:last-child {
+      padding-right: vars.$spacing-lg;
+    }
+  }
+}
+
+.row {
+  border-bottom: 1px solid rgba(vars.$md-sys-color-on-surface, 0.12);
+  transition: background-color 0.2s ease;
+
+  td {
+    padding: vars.$spacing-sm vars.$spacing-md;
+    font-size: 1rem;
+    vertical-align: middle;
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.4;
+    min-height: 48px;
+
+    &:first-child {
+      padding-left: vars.$spacing-lg;
+    }
+
+    &:last-child {
+      padding-right: vars.$spacing-lg;
+    }
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background-color: color.adjust(vars.$md-sys-color-surface-variant, $lightness: 5%);
+  }
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  padding: vars.$spacing-xs vars.$spacing-sm;
+  border-radius: vars.$border-radius-sm;
+  font-size: vars.$md-sys-typescale-body-small;
+  font-weight: 500;
+
+  &.pending {
+    background-color: rgba(vars.$md-sys-color-primary, 0.1);
+    color: vars.$md-sys-color-primary;
+  }
+
+  &.processing {
+    background-color: rgba(vars.$md-sys-color-secondary, 0.1);
+    color: vars.$md-sys-color-secondary;
+  }
+
+  &.completed {
+    background-color: rgba(#4CAF50, 0.1);
+    color: #4CAF50;
+  }
+
+  &.failed {
+    background-color: rgba(vars.$md-sys-color-error, 0.1);
+    color: vars.$md-sys-color-error;
+  }
+}
+
+.sortIcon {
+  display: inline-block;
+  margin-left: vars.$spacing-xs;
+  font-size: 0.8em;
+  transition: transform 0.2s ease;
+  vertical-align: middle;
+}
+
+// Column widths
+.colId {
+  width: 60px;
+}
+
+.colTransportModel {
+  width: 150px;
+}
+
+.colTransportNumber {
+  width: 120px;
+}
+
+.colPackageType {
+  width: 120px;
+}
+
+.colServices {
+  width: 200px;
+}
+
+.colStatus {
+  width: 100px;
+}
+
+.colCargoType {
+  width: 120px;
+}
+
+.colDistance {
+  width: 100px;
+}
+
+.colDepartureTime,
+.colDeliveryTime {
+  width: 160px;
+}
+
+.colTravelTime {
+  width: 100px;
+}
+
+.colCollector {
+  width: 200px;
+} 

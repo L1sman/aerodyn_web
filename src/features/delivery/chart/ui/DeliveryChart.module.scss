@@ -1,0 +1,54 @@
+@use '@/shared/ui/styles/_variables' as vars;
+
+.chart {
+  background-color: vars.$md-sys-color-surface;
+  border-radius: vars.$border-radius-md;
+  box-shadow: vars.$md-sys-elevation-1;
+  padding: vars.$spacing-lg;
+  width: 100%;
+
+  &:hover {
+    box-shadow: vars.$md-sys-elevation-2;
+  }
+}
+
+.title {
+  color: vars.$md-sys-color-on-surface;
+  font-size: vars.$md-sys-typescale-title-medium;
+  margin-bottom: vars.$spacing-lg;
+}
+
+.chartContent {
+  height: 300px;
+  width: 100%;
+
+  :global {
+    .recharts-cartesian-grid-horizontal line,
+    .recharts-cartesian-grid-vertical line {
+      stroke: vars.$md-sys-color-surface-variant;
+    }
+
+    .recharts-text {
+      fill: vars.$md-sys-color-on-surface-variant;
+    }
+
+    .recharts-tooltip {
+      background-color: vars.$md-sys-color-surface !important;
+      border: 1px solid vars.$md-sys-color-surface-variant !important;
+      border-radius: vars.$border-radius-sm;
+    }
+  }
+}
+
+.loading, .error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  font-size: vars.$md-sys-typescale-body-large;
+  color: vars.$md-sys-color-on-surface;
+}
+
+.error {
+  color: vars.$md-sys-color-error;
+} 

@@ -1,0 +1,48 @@
+@use '../../styles/variables' as vars;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: vars.$spacing-xs;
+}
+
+.label {
+  color: vars.$md-sys-color-on-surface-variant;
+  font-size: vars.$md-sys-typescale-body-small;
+}
+
+.input {
+  background-color: vars.$md-sys-color-surface-variant;
+  color: vars.$md-sys-color-on-surface;
+  border: 1px solid rgba(vars.$md-sys-color-on-surface, 0.12);
+  border-radius: vars.$border-radius-sm;
+  padding: vars.$spacing-sm vars.$spacing-md;
+  font-size: vars.$md-sys-typescale-body-medium;
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: vars.$md-sys-color-primary;
+  }
+
+  &::placeholder {
+    color: rgba(vars.$md-sys-color-on-surface, 0.7);
+  }
+
+  &.error {
+    border-color: vars.$md-sys-color-error;
+  }
+}
+
+.errorText {
+  color: vars.$md-sys-color-error;
+  font-size: vars.$md-sys-typescale-body-small;
+}
+
+.fullWidth {
+  width: 100%;
+  
+  .input {
+    width: 100%;
+  }
+} 

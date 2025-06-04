@@ -1,0 +1,35 @@
+@use '@/shared/ui/styles/_variables' as vars;
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: vars.$spacing-md;
+  align-items: flex-end;
+  margin-bottom: vars.$spacing-lg;
+}
+
+.filterItem {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  background-color: vars.$md-sys-color-surface;
+  padding: vars.$spacing-md;
+  border-radius: vars.$border-radius-md;
+  box-shadow: vars.$md-sys-elevation-1;
+
+  &:hover {
+    box-shadow: vars.$md-sys-elevation-2;
+  }
+}
+
+.error {
+  color: vars.$md-sys-color-error;
+  padding: vars.$spacing-md;
+  text-align: center;
+  font-size: vars.$md-sys-typescale-body-medium;
+}
+
+.resetButton {
+  margin-top: vars.$spacing-md;
+  float: right;
+} 

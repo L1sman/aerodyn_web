@@ -1,0 +1,57 @@
+@use '@/shared/ui/styles/_variables' as vars;
+
+.container {
+  min-height: 100vh;
+  background-color: vars.$md-sys-color-background;
+  color: vars.$md-sys-color-on-background;
+  padding: vars.$spacing-xl;
+  display: grid;
+  gap: calc(#{vars.$spacing-xl} * 1.5);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: vars.$spacing-xl;
+}
+
+.title {
+  color: vars.$md-sys-color-on-background;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.logoutButton {
+  background-color: transparent;
+  color: vars.$md-sys-color-error;
+  border: 1px solid vars.$md-sys-color-error;
+  padding: vars.$spacing-sm vars.$spacing-lg;
+  border-radius: vars.$border-radius-sm;
+  cursor: pointer;
+  font-size: vars.$md-sys-typescale-body-medium;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: rgba(vars.$md-sys-color-error, 0.1);
+  }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: vars.$md-sys-typescale-title-medium;
+  color: vars.$md-sys-color-on-background;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: vars.$md-sys-typescale-title-medium;
+  color: vars.$md-sys-color-error;
+} 
