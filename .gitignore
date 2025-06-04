@@ -53,6 +53,8 @@ dist-ssr
 *.tsbuildinfo
 tsconfig.app.tsbuildinfo
 tsconfig.node.tsbuildinfo
+*.d.ts
+!vite-env.d.ts
 
 # Misc
 .cache
